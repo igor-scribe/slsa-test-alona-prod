@@ -4,9 +4,9 @@ on:
     workflow_dispatch:
 
 env:
-  SCRIBE_URL: "https://api.staging.hub.scribesecurity.com/scribe-proxy"
-  SCRIBE_LOGIN_URL: "https://scribesecurity-staging.us.auth0.com"
-  SCRIBE_AUDIENCE: "api.staging.scribesecurity.com"
+  SCRIBE_URL: "https://api.prod.hub.scribesecurity.com/scribe-proxy"
+  SCRIBE_LOGIN_URL: "https://scribesecurity-prod.us.auth0.com"
+  SCRIBE_AUDIENCE: "api.prod.scribesecurity.com"
 
 jobs:
   
