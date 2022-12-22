@@ -72,15 +72,15 @@ jobs:
           cat input.json | sed "s/GH_TOKEN/${{ secrets.GH_ACCESS_TOKEN }}/" | ./opa eval -I --format=pretty -b GitHub-Posture/github data.github.slsa.report > slsa.json
           cat slsa.json
 
+      #- uses: actions/upload-artifact@v2
+       # with:
+       #   name: provenance
+        #  path: ${{ steps.gensbom_slsa.outputs.OUTPUT_PATH }}
+          
       - uses: actions/upload-artifact@v2
         with:
-          name: provenance
-          path: ${{ steps.gensbom_slsa.outputs.OUTPUT_PATH }}
-          
-     # - uses: actions/upload-artifact@v2
-      #  with:
-        #  name: slsa_report
-         # path: slsa.json
+          name: slsa_report
+          path: slsa.json
           
       - name: Cache input.json
         uses: actions/cache@v3
